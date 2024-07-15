@@ -1,5 +1,7 @@
 # Example app for CI Hexlet course
 
+![test-fork-rep workflow](https://github.com/sergeikuz/hexlet-ci-app/actions/workflows/test-fork-rep.yml/badge.svg?event=push)
+
 Starting boilerplate of [Strapi](https://strapi.io/) application
 
 ## System requirements
