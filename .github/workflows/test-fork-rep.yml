@@ -1,0 +1,27 @@
+# file: .github/workflows/test-fork-rep.yml
+name: test-fork-rep.yml
+# on – определяет события, которые запускают воркфлоу
+on: push
+# Пример для проекта на Node.js
+jobs:
+  build: # имя взято для примера
+    runs-on: ubuntu-latest
+
+    steps:
+      # Клонируем репозиторий
+      - uses: actions/checkout@v3
+      # Устанавливаем Node.js
+      - uses: actions/setup-node@v3
+      # Ставим зависимости
+      - run: npm install
+      - name: starting(setup and start)
+        run: make setup
+        run: make start
+      - name: run tests
+        run: make test
+      - name: run linter
+        run: make lint
+      # Запускаем тесты
+      # у шагов может быть имя, иногда это помогает отладке
+      # имя выводится на Github при просмотре сборки
+      # name и run относятся к одной задаче, поэтому дефис ставится только перед name
