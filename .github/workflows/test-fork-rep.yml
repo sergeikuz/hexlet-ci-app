@@ -14,8 +14,9 @@ jobs:
       - uses: actions/setup-node@v3
       # Ставим зависимости
       - run: npm install
-      - name: starting(setup and start)
+      - name: using setup
         run: make setup
+      - name: ising start
         run: make start
       - name: run tests
         run: make test
